@@ -12,10 +12,13 @@ public class Server {
 			ServerSocket serverSocket = new ServerSocket(9090);
 			
 			boolean isStopped = false;
+			
 			while (!isStopped) {
 				
 				Socket clientSocket = serverSocket.accept();
+				
 				ClientThread clientThread = new ClientThread(clientSocket);
+				
 				clientThread.start();
 			}
 			

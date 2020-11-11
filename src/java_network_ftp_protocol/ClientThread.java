@@ -27,7 +27,7 @@ public class ClientThread extends Thread {
 			System.out.println("file "+ fileName +" has been requested by "+ socket.getInetAddress().getHostAddress());
 			
 			// Specify the root directory and the file
-			File file = new File(fileName);
+			File file = new File("sroot/"+fileName);
 			
 			// check if the file exists
 			if(!file.exists()) {
